@@ -1,17 +1,17 @@
 /**
 Node modules
- */
-import type { CorsOptions } from "cors";
-import dotenv from "dotenv";
+*/
+import type { CorsOptions } from 'cors';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
-const WHITELISTED_ORIGINS: string[] = [""];
+const WHITELISTED_ORIGINS: string[] = [''];
 
 const corsOptions: CorsOptions = {
   origin(origin, callback) {
     if (
-      process.env.NODE_ENV === "development" ||
+      process.env.NODE_ENV === 'development' ||
       !origin ||
       WHITELISTED_ORIGINS.includes(origin)
     ) {

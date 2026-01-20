@@ -1,15 +1,15 @@
 /**
- Node Modules
- */
-import { Router } from "express";
+Node Modules
+*/
+import { Router } from 'express';
 
 const router = Router();
 
 // Root route
-router.get("/", (_, res) => {
+router.get('/', (_, res) => {
   res.status(200).json({
     status: 200,
-    message: "API is live",
+    message: 'API is live',
     timestamp: new Date().toISOString(),
   });
 });
